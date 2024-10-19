@@ -1,0 +1,116 @@
+.productsContainer {
+    flex-grow: 1;
+    margin: 5px 0;
+    overflow-y: auto;
+}
+
+.products {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 10px 0;
+    align-items: center;
+    border-bottom: 1px solid var(--grayThree);
+    border-top: 1px solid var(--grayThree);
+    transition: all .6s ease;
+}
+
+.bagImg {
+    background-color: var(--white);
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--grayThree);
+}
+
+.bagImg img {
+    max-width: 50px;
+}
+
+.producInf {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.producInf h6 {
+    font-size: var(--smallFont1);
+}
+
+.producInf span {
+    font-size: var(--smallFont2);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.delete {
+    background-color: transparent;
+    border: 2px solid var(--grayThree);
+    color: var(--grayThree);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .6s ease;
+    padding: 3px 8px;
+    background-color: transparent;
+    border: 2px solid var(--grayThree);
+    color: var(--grayThree);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .6s ease;
+    position: relative;
+    right: -25%;
+}
+
+.delete:hover {
+    color: var(--black);
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80px;
+    height: 30px;
+    border: 1px solid var(--grayThree);
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 5px;
+}
+
+.remove,
+.add {
+    cursor: pointer;
+    color: var(--grayThree);
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    transition: all .6s ease;
+}
+
+.remove:hover,
+.add:hover {
+    color: var(--black);
+}
+
+.displayNumber {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--black);
+    text-align: center;
+    flex: 1;
+}
+
+.displayNumber {
+    font-size: var(--smallFont2);
+    border-left: 1px solid var(--grayThree);
+    border-right: 1px solid var(--grayThree);
+}

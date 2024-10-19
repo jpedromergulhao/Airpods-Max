@@ -1,5 +1,3 @@
-const { update } = require("three/examples/jsm/libs/tween.module.js");
-
 //Hamburger menu
 let menuIcon = document.getElementsByTagName("svg")[1];
 let menu = document.getElementsByClassName("menu")[0];
@@ -10,17 +8,37 @@ menuIcon.onclick = () => {
 }
 
 //Buy section
-document.getElementsByClassName('.btn').forEach(button => {
-    button.addEventListener('click', function() {
-        document.getElementsByClassName('.airpod-img').forEach(img => {
-            img.style.opacity = 0;
+let selectedColor = null;
+
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function () {
+        document.querySelectorAll('.airpod-img').forEach(img => {
+            img.style.opacity = '0';
         });
 
         const color = this.getAttribute('data-color');
-        document.getElementsByClassName(`.${color}`).style.opacity = 1;
+        selectedColor = color;
+
+        const selectedImg = document.querySelector(`.airpod-img.${color}`);
+        if (selectedImg) {
+            selectedImg.style.opacity = '1';
+        }
     });
 });
 
-// id: "comfort",
-// position: { x: 6, y: 0.8, z: -50 },
-// rotation: { x: 0, y: -0.1, z: -6.5 }
+document.querySelector('.addBtn').addEventListener('click', function () {
+    if (!selectedColor) {
+        alert("Please select a color before adding to bag.");
+        return;
+    }
+
+    const event = new CustomEvent('addToBag', { detail: { color: selectedColor } });
+    window.dispatchEvent(event);
+});
+
+//Footer links 
+document.querySelectorAll('.linkSection h6').forEach((h6) => {
+    h6.addEventListener('click', function () {
+      this.parentElement.classList.toggle('active');
+    });
+  });

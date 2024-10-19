@@ -1,0 +1,26 @@
+.bagListTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bagListTop h5 {
+    font-size: var(--pFont);
+}
+
+.close{
+    background-color: transparent;
+    border: 2px solid var(--grayThree);
+    color: var(--grayThree);
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .6s ease;
+    padding: 5px 10px;
+}
+
+.close:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid transparent;
+}

@@ -1,0 +1,15 @@
+.bagList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    max-width: 500px;
+    height: 100vh;
+    right: 0;
+    z-index: 2;
+    background-color: var(--grayOne);
+    padding: 20px 60px;
+    border-left: 2px solid var(--grayThree);
+    transition: all .6s ease;
+    transform: translateX(100%);
+}

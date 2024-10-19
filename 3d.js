@@ -18,7 +18,7 @@ loader.load("./assets/airpods_max_clone.glb",
     function (gltf) {
         airPod = gltf.scene;
         scene.add(airPod);
-        airPod.position.set(3.6, -0.6, -30);
+        airPod.position.set(3.6, -0.4, -30);
         airPod.rotation.set(0, 3.8, 0);
         airPod.visible = true;
     },
@@ -52,10 +52,10 @@ window.addEventListener('resize', () => {
 });
 
 let arrPosition = [
-    { id: "header", position: { x: 3.6, y: -0.6, z: -30 }, rotation: { x: 0, y: 3.8, z: 0 } },
-    { id: "design", position: { x: -2.5, y: -0.2, z: -30 }, rotation: { x: 0, y: 3.2, z: 0 } },
-    { id: "sound", position: { x: 4, y: 0, z: -30 }, rotation: { x: 0, y: 1.5, z: 0 } },
-    { id: "comfort", position: { x: 6, y: 0.8, z: -50 }, rotation: { x: 0, y: 3, z: 0.2 } },
+    { id: "header", position: { x: 3.6, y: -0.4, z: -30 }, rotation: { x: 0, y: 3.8, z: 0 } },
+    { id: "design", position: { x: -2.5, y: 0, z: -30 }, rotation: { x: 0, y: 3.2, z: 0 } },
+    { id: "sound", position: { x: 3, y: 0, z: -40 }, rotation: { x: 0, y: 1.5, z: 0 } },
+    { id: "comfort", position: { x: 5.6, y: 0.9, z: -50 }, rotation: { x: -0.02, y: 3.05, z: 0.2 } },
     { id: "battery", position: { x: -3, y: 0, z: -30 }, rotation: { x: 0, y: 2.5, z: 0 } },
 ];
 
@@ -95,7 +95,7 @@ const buySection = document.getElementById('buy');
 const buySectionPosition = buySection.offsetTop - window.innerHeight * 0.5;
 
 const batterySection = document.getElementById('battery');
-const batterySectionPosition = batterySection.offsetTop - window.innerHeight * 0.005;
+const batterySectionPosition = batterySection.offsetTop - window.innerHeight * 0.1;
 
 window.addEventListener("scroll", () => {
     const scrollPosition = window.scrollY;

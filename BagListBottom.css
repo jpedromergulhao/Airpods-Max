@@ -1,0 +1,52 @@
+.bagListBottom {
+    margin-top: 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid var(--grayThree);
+    border-bottom: 1px solid var(--grayThree);
+    margin-bottom: 15px;
+}
+
+.total span {
+    font-size: var(--smallFont2);
+}
+
+.bagCtas {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.ctaBtn {
+    width: 100%;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: var(--smallFont2);
+    border-radius: 20px;
+    transition: all .6s ease;
+}
+
+.shoppingCta {
+    border: 1px solid var(--grayThree);
+    color: var(--grayThree);
+    background-color: transparent;
+}
+
+.buyBtn {
+    border: 1px solid transparent;
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+.shoppingCta:hover {
+    color: var(--black);
+    transform: translateY(-5px);
+}
+
+.buyBtn:hover {
+    transform: translateY(-5px);
+}
